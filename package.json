@@ -1,7 +1,8 @@
 {
-  "name": "social-media-app",
-  "version": "0.0.1",
-  "description": "Angular 4 MEAN app",
+  "name": "individual-project-ksu",
+  "version": "1.0.0",
+  "description": "WebApp to interact with multiple social media account at one centralize place.",
+  "author": "Jose Gonzalez <eduardo.gch@gmail.com>",
   "scripts": {
     "start": "concurrently  \"nodemon server.js\" \"ng serve --no-aot --proxy-config proxy.conf.json\"",
     "start:prod": "npm run build && npm run server",

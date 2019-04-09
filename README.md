@@ -1,17 +1,17 @@
-# SocialMediaApp - KSU
+# Individual Project - Jose Gonzalez - KSU
 
-Social media project for KSU IT6203 Group 1.
+Individual Project for KSU class IT6203.
 
 Demo & Resources
 ===================
-- [Demo](http://social-ksu.ddns.net/)
-- [Server IP](http://157.230.180.3) 
+- [Demo](http://jose-ksu.ddns.net/)
+- [Server IP](http://206.81.14.206) 
 
 Development server
 ===================
 
 ## Installation
-1. Clone this repo: `git clone https://github.com/it6203group1/social-media-app.git`
+1. Clone this repo: `git clone https://github.com/eduardogch/individual-project-ksu.git`
 2. `cd` into the folder of the repo you just cloned
 3. Install npm dependencies `npm install`
 4. Start a MongoDB instance `brew services start mongodb`
@@ -43,8 +43,8 @@ sudo bash nodesource_setup.sh
 sudo apt install -y build-essential git nodejs mongodb
 
 # Gets social-network app from github
-git clone https://github.com/it6203group1/social-media-app.git
-cd social-media-app/
+git clone https://github.com/eduardogch/individual-project-ksu.git
+cd individual-project-ksu/
 npm install
 npm run start:prod
 

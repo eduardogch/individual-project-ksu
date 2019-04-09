@@ -52,9 +52,9 @@ app.get("/api", function(req, res) {
  * Catch all the routes and give back the Angular app
  */
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('./dist/social-media-app/'));
+  app.use(express.static('./dist/individual-project-ksu/'));
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, './dist/social-media-app/index.html'));
+    res.sendFile(path.join(__dirname, './dist/individual-project-ksu/index.html'));
   });
 }
 

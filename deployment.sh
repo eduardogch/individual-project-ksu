@@ -5,8 +5,8 @@ sudo bash nodesource_setup.sh
 sudo apt install -y build-essential git nodejs mongodb
 
 # Gets social-network app from github
-git clone https://github.com/it6203group1/social-media-app.git
-cd social-media-app/
+git clone https://github.com/eduardogch/individual-project-ksu.git
+cd individual-project-ksu/
 npm install
 npm run start:prod
 
