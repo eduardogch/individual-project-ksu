@@ -18,4 +18,22 @@
   </li>
 </ul>
 
+<mat-toolbar color="primary" id="toolbar">
+  <div class="left">
+    <span id="title">Individual Project - KSU </span><span id="author">by Jose Gonzalez Chavira</span>
+  </div>
+
+  <button id="menu" mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/create">
+      <mat-icon>note_add</mat-icon>
+      <span>Create Todo</span>
+    </button>
+    <button mat-menu-item routerLink="">
+      <mat-icon>view_headline</mat-icon>
+      <span>Read Todos</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>
+
 <router-outlet></router-outlet>
