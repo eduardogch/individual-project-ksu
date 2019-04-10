@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
-// Import the DataService
 import { DataService } from './../../Services/data.service';
 
 @Component({
@@ -10,7 +8,7 @@ import { DataService } from './../../Services/data.service';
 })
 export class TodoListComponent implements OnInit {
 
-  title = 'CRUD project with MEAN :)';
+  title = 'CRUD project with MEAN stack :)';
   todos: Array<Object> = [];
   private todo: Object = {};
 

@@ -9,12 +9,12 @@ import { HttpModule } from '@angular/http';
 import { FormsModule }   from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { DataService } from './Todos/Services/data.service';
+import { DataService } from './Users/Services/data.service';
 import { AppRoutes } from './app.routes';
 
 import { MatInputModule, MatCardModule, MatButtonModule, MatToolbarModule, MatMenuModule, MatIconModule } from '@angular/material';
-import { TodoFormComponent } from './Todos/Components/todo-form/todo-form.component';
-import { TodoListComponent } from './Todos/Components/todo-list/todo-list.component';
+import { TodoFormComponent } from './Users/Components/todo-form/todo-form.component';
+import { TodoListComponent } from './Users/Components/todo-list/todo-list.component';
 
 @NgModule({
   declarations: [

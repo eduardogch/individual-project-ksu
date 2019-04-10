@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 // Import the DataService
 import { DataService } from './../../Services/data.service';
 
-import { Todo } from './../../Model/Todo';
+import { User } from './../../Model/User';
 
 @Component({
   selector: 'todo-form',
@@ -12,8 +12,8 @@ import { Todo } from './../../Model/Todo';
 })
 export class TodoFormComponent implements OnInit {
 
-  todos: Array<Todo> = [];
-  todo: Todo = {
+  todos: Array<User> = [];
+  todo: User = {
     title: '',
     text: ''
   };
