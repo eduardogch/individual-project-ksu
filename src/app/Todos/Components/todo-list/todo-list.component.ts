@@ -10,6 +10,7 @@ import { DataService } from './../../Services/data.service';
 })
 export class TodoListComponent implements OnInit {
 
+  title = 'CRUD project with MEAN :)';
   todos: Array<Object> = [];
   private todo: Object = {};
 
