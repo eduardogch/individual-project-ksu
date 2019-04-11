@@ -11,8 +11,8 @@ export class UserFormComponent implements OnInit {
 
   users: Array<User> = [];
   user: User = {
-    title: '',
-    text: ''
+    name: '',
+    email: ''
   };
 
   constructor(private _dataService: DataService) {

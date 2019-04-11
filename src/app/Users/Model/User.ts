@@ -1,4 +1,4 @@
 export class User {
-  title: string;
-  text: string;
+  name: string;
+  email: string;
 }

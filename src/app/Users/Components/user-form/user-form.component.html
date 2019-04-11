@@ -3,11 +3,11 @@
 <mat-card>
   <form (ngSubmit)="onSubmit()" #todoForm="ngForm">
     <mat-form-field class="example-full-width">
-      <input matInput [(ngModel)]="user.title" name="title" placeholder="User's title">
+      <input matInput [(ngModel)]="user.name" name="name" placeholder="User's name">
     </mat-form-field>
 
     <mat-form-field class="example-full-width">
-      <input matInput [(ngModel)]="user.text" name="text" placeholder="User's text" />
+      <input matInput [(ngModel)]="user.email" name="email" placeholder="User's email" />
     </mat-form-field>
 
     <mat-card-actions>

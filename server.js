@@ -9,7 +9,7 @@ const dotenv = require('dotenv');
 const path = require('path');
 const mongoose = require('mongoose');
 const expressValidator = require('express-validator');
-const User = require('../models/User');
+const User = require('./models/User');
 const app = express();
 
 /**
@@ -49,7 +49,7 @@ let response = {
   message: null
 };
 
-router.get('/api/v1/users', function(req, res) {
+app.get('/api/v1/users', function(req, res) {
   User.find({}, function (err, users) {
     if (err)
       sendError(err, res);
@@ -58,10 +58,10 @@ router.get('/api/v1/users', function(req, res) {
   });
 });
 
-router.post('/api/v1/user', function(req, res) {
+app.post('/api/v1/user', function(req, res) {
   let user = new User({
-    'title': req.body.title,
-    'text': req.body.text
+    'name': req.body.name,
+    'email': req.body.email
   });
 
   user.save((err) => {
@@ -72,7 +72,7 @@ router.post('/api/v1/user', function(req, res) {
   });
 });
 
-router.delete('/api/v1/user/:userid', function(req, res) {
+app.delete('/api/v1/user/:userid', function(req, res) {
   let userId = req.params.userid;
 
   User.findByIdAndRemove(userId, function (err, user) {
