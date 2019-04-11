@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
 
@@ -10,25 +9,25 @@ export class DataService {
 
   constructor(private _http: Http) { }
 
-  getTodos() {
-    return this._http.get('/api/v1/todos')
+  getUsers() {
+    return this._http.get('/api/v1/users')
       .map(result => result.json().data);
   }
 
-  createTodo(body) {
+  createUser(body) {
     let bodyString = JSON.stringify(body);
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
 
-    return this._http.post('/api/v1/todo', body, options)
+    return this._http.post('/api/v1/user', body, options)
       .map((res: Response) => res.json());
   }
 
-  deleteTodo(todoId) {
+  deleteUser(userId) {
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
 
-    return this._http.delete('/api/v1/todo/'+todoId, options)
+    return this._http.delete('/api/v1/user/' + userId, options)
       .map((res: Response) => res.json());
   }
 

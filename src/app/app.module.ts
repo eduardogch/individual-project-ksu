@@ -13,14 +13,14 @@ import { DataService } from './Users/Services/data.service';
 import { AppRoutes } from './app.routes';
 
 import { MatInputModule, MatCardModule, MatButtonModule, MatToolbarModule, MatMenuModule, MatIconModule } from '@angular/material';
-import { TodoFormComponent } from './Users/Components/todo-form/todo-form.component';
-import { TodoListComponent } from './Users/Components/todo-list/todo-list.component';
+import { UserFormComponent } from './Users/Components/user-form/user-form.component';
+import { UserListComponent } from './Users/Components/user-list/user-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoFormComponent,
-    TodoListComponent
+    UserFormComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,8 @@
 import { Routes } from '@angular/router';
-
-import { TodoListComponent } from './Users/Components/todo-list/todo-list.component';
-import { TodoFormComponent } from './Users/Components/todo-form/todo-form.component';
+import { UserListComponent } from './Users/Components/user-list/user-list.component';
+import { UserFormComponent } from './Users/Components/user-form/user-form.component';
 
 export const AppRoutes: Routes = [
-  { path: '', component: TodoListComponent },
-  { path: 'create', component: TodoFormComponent },
+  { path: '', component: UserListComponent },
+  { path: 'create', component: UserFormComponent },
 ];
