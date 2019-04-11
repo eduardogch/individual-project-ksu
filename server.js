@@ -9,7 +9,7 @@ const dotenv = require('dotenv');
 const path = require('path');
 const mongoose = require('mongoose');
 const expressValidator = require('express-validator');
-
+const User = require('../models/User');
 const app = express();
 
 /**
@@ -43,9 +43,44 @@ app.use(expressValidator());
 /**
  * API examples routes.
  */
-app.get("/api", function(req, res) {
-  // res.json(version);
-  res.send('Hello World!');
+let response = {
+  status: 200,
+  data: [],
+  message: null
+};
+
+router.get('/api/v1/users', function(req, res) {
+  User.find({}, function (err, users) {
+    if (err)
+      sendError(err, res);
+    response.data = users;
+    res.json(response);
+  });
+});
+
+router.post('/api/v1/user', function(req, res) {
+  let user = new User({
+    'title': req.body.title,
+    'text': req.body.text
+  });
+
+  user.save((err) => {
+    if (err)
+      sendError(err, res);
+    response.data = 'User created';
+    res.json(response);
+  });
+});
+
+router.delete('/api/v1/user/:userid', function(req, res) {
+  let userId = req.params.userid;
+
+  User.findByIdAndRemove(userId, function (err, user) {
+    if(err)
+      sendError(err, res);
+    response.data = 'User deleted'
+    res.json(response);
+  });
 });
 
 /**
